@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap');
+
+body {
+    font-family: "Cardo", serif;
+    background-color: #838080c7;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.counter {
+    font-size: 24px;
+    color: black;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.timeline_container {
+    max-width: 100%;
+    position: relative;
+    padding: 80px 20px;
+    background-attachment: none;
+    background-size: cover;
+    margin-bottom: 80px;
+}
+
+.timeline-img {
+    width: 300px; 
+    overflow: hidden; 
+}
+
+.timeline-img {
+    width: 100%; 
+    transition: opacity 0.3s ease; 
+}
+
+.timeline-img:hover {
+    opacity: 0.6; 
+}
+
+.timeline-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.timeline-header_title {
+    color: black;
+    font-size: 46px;
+    font-family: "Cardo", serif;
+    font-weight: normal;
+    margin: 0;
+}
+
+.timeline-header_subtitle {
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    letter-spacing: 5px;
+    margin: 10px 0 0 0;
+    font-weight: normal;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    margin-left: -1px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+@media only screen and (max-width: 767px) {
+    .timeline::before {
+        left: 20px;
+    }
+}
+
+.timeline-item {
+    display: flex;
+    width: 100%;
+    margin: 20px 0;
+    position: relative;
+}
+
+.timeline-item:nth-child(odd) {
+    flex-direction: row;
+}
+
+.timeline-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.timeline-content {
+    width: 45%;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    position: relative;
+}
+
+.timeline-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.timeline_content-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #0e0e0e;
+}
+
+.timeline_content-desc {
+    font-size: 16px;
+    color: #555;
+}
+
+.hover-content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    z-index: 10;
+}
+
+.timeline-item:nth-child(odd) .hover-content {
+    left: 55%;
+}
+
+.timeline-item:nth-child(even) .hover-content {
+    right: 55%;
+}
+
+.timeline-item:hover .hover-content {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 767px) {
+    .timeline-item {
+        flex-direction: column;
+    }
+
+    .timeline-content {
+        width: 100%;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .hover-content {
+        position: static;
+        transform: translateY(0);
+        width: 100%;
+        margin-top: 10px;
+        right: auto;
+        left: auto;
+    }
+
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-item:nth-child(odd) .hover-content,
+    .timeline-item:nth-child(even) .hover-content {
+        left: 0;
+        right: 0;
+    }
+}
+
+.demo-footer {
+    padding: 60px 0;
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-family: "Cardo", serif;
+}
+
+.demo-footer h3,
+.demo-footer p {
+    margin: 5px 0;
+    font-size: 16px;
+}
