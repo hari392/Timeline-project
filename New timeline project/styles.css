@@ -1,0 +1,643 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding:0;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Timeline Slider */
+.timeline-slider {
+    width: 100%;
+    max-width: 85%;
+    min-height: 100px;
+    text-align: center;
+    position: relative;
+    padding: 55px;
+}
+
+/* Timeline Container */
+.timeline-years {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
+    width: 100%;
+    padding: 0px;
+    
+}
+
+.timeline-years::before {
+    content: '';
+    position: relative;
+    top: 70%;
+    width: 1px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #ddd;
+    z-index: -1;
+}
+
+.timeline-years::after {
+    content: '';
+    position: absolute;
+    top: 50.5%;
+    width: 1110px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #ddd;
+    z-index: -1;
+}
+
+
+/* Branch Container */
+.branch-container {
+    text-align: center;
+    margin-bottom: 5px;
+    position: absolute;
+    top: 0;
+    transform: translateY(-100%);
+}
+
+/* Text Styles */
+.branches {
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(95, 120, 171);
+}
+
+.text {
+    font-size: 10px;
+    color: #555;
+}
+
+/* Year Container */
+.year-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-bottom: 85px;
+}
+
+/* Employee Container */
+.employee-container {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.employee-count {
+    font-size: 20px;
+    font-weight: bold;
+    color:rgb(123, 198, 10);
+}
+
+.employee-text {
+    font-size: 9px;
+    color: #555;
+}
+
+/* Year Styles */
+.year {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 2px;
+    text-align: center;
+    transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+    background-color: #fff;
+    padding: 12px;
+    border-radius: 2px;
+}
+
+.year:hover {
+    color: white;
+    background-color: #ff7b39;
+    border-radius: 1px;
+}
+
+.year.active {
+    color: white;
+    background-color: #ff7b39;
+    border-radius: 1px;
+}
+
+
+  /* Card Styling */
+  .timeline-card {
+    position: relative;
+    width: 180px;
+    height:135px;
+    border-radius: 2px;
+    background-color: #f7f4f4;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 290px;
+  }
+  
+  /* Year Styling */
+  .timeline-card .years {
+    font-size: 20px;
+    color: black;
+    margin-bottom:5px;
+  }
+  
+  /* Counts Section */
+  .timeline-card .counts {
+    display: flex;
+    flex-direction: row;
+    gap: 35px;
+    margin-left: 10px;
+    margin-bottom: 8px;
+  }
+  
+  .timeline-card .counts .offices,
+  .timeline-card .counts .employees {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  
+  .timeline-card .counts .count {
+    font-size: 22px;
+    color: #007bff;
+    font-weight: bolder;
+    margin-bottom: 1%;
+ }
+  
+  .timeline-card .counts .count1 {
+    font-size: 22px;
+    color:rgb(123, 198, 10);
+    font-weight: bolder;
+  }
+
+  .timeline-card .counts .label {
+    
+    color: #555;
+    font-size: 9px;
+    
+  }
+
+  
+  /* Images Section */
+  .timeline-card .icons {
+    display: flex;
+    gap: 40px;
+    margin-top: 0;
+  }
+  
+  .timeline-card .icons .icon {
+    width: 45px;
+    height: 45px;
+}
+
+  .timeline-card::after {
+    content: '';
+    position:absolute;
+    top: 23%;
+    left:99.9%; /* Adjusts the position to be outside the card */
+    width: 10px; /* Width of the orange line */
+    height: 55%; /* Matches the card's height */
+    background-color: #ff7b39; /* Color of the line */
+    border-radius: 0px;
+    
+}
+
+  
+ /* Right Section Details */
+ .timeline-details {
+    flex: 1;
+    margin-right: 180px;
+    margin-left: 1px;
+    position: relative; /* Use relative positioning to ensure layout stability */
+    text-align: left;
+    
+  }
+  
+  .timeline-details h4 {
+    font-size: 13px;
+    color: #333;
+    margin-bottom: 0;
+    text-align: left;
+  }
+  
+  /* Horizontal Line Under Headings */
+  .timeline-details hr {
+    border: none;
+    border-top: 1px solid blue;
+    margin: 5px 0 15px;/*space between the keymilestones, awar and underline*/
+  }
+  
+  /* List Styling */
+  .timeline-details ul {
+    list-style: none;
+    text-align: left;
+    padding: 0;
+  }
+  
+  .key-milestones ul li {
+    font-size: 14px;
+    color: #555;
+    padding-left: 25px; 
+    position: relative;
+    margin-bottom: 8px; 
+  }
+  .key-milestones li {
+    font-size: 14px;
+    color: #555; /* Keep the styling similar to timeline details */
+    position: relative; /* Ensure relative positioning */
+}
+
+.highlight {
+    color: rgb(123, 198, 10); /* Replace 'orange' with your desired color */
+    font-weight: bold; /* Optional: Make it bold for emphasis */
+}
+
+/* Add tick icon only for Key Milestones section */
+.key-milestones li::before {
+    content: "🗹";
+    position: relative;
+    margin-right:10px ;
+    color: #007bff;
+    font-size: 16px;
+    
+  }
+  
+  /* Prevent overlap of the icon with text */
+  .key-milestones li {
+    position: relative;
+    padding-left: 8px;
+  }
+  
+  /* Ensure other sections (like Awards) have no icon */
+  .awards li::before {
+    content: none;
+  }
+  .awards {
+    list-style: none;
+    padding: 0;
+}
+
+.awards li {
+    margin: 5px 0;
+}
+
+.highlight-container {
+    display: grid;
+    grid-template-columns: 30px 1fr; /* Fixed width for highlights */
+    align-items: right; /* Align items vertically */
+}
+.highlight {
+    font-weight: bold;
+    color:  rgb(123, 198, 10); 
+    font-size: 14px;
+    text-align: right; /* Align numbers to the right for consistent spacing */
+}
+
+.award-description {
+    font-size: 14px;
+    color: #555;
+    padding-left: 8px; /* Optional: Add some spacing for readability */
+}
+
+/* Navigation Arrows */
+.arrow-left,
+.arrow-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(50%);
+    font-size: 36px;
+    color: #ff7b39;
+    cursor: pointer;
+    background-color: #fff;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    top: 35%;
+}
+
+.arrow-left {
+    left: 0.1%;
+}
+
+.arrow-right {
+    margin-left: 95%;
+}
+
+.arrow-left:hover,
+.arrow-right:hover {
+    background-color: #ff7b39;
+    color: #fff;
+}
+
+/* Building Image Styles */
+.building-img {
+    display: block;
+    margin: 5px auto 10px; /* Center the image */
+}
+
+/* Building Image Styles */
+.building-img {
+    display: block;
+    margin: 0 auto; /* Center the image */
+    position: relative; /* Ensures positioning is within a container if needed */
+    transform: translateY(10px); /* Adjusts vertical position */
+}
+
+/* Sizes for the building images */
+.building-img.one {
+    width: 40px;
+    height: auto;
+    transform: translateY(0);
+}
+
+.building-img.two {
+    width: 40px;
+    height: auto;
+    transform: translateY(0);
+}
+
+.building-img.three {
+    width: 40px;
+    height: auto;
+    transform: translateY(0);
+}
+
+.building-img.four {
+    width: 45px;
+    height: auto;
+    transform: translateY(2px);
+}
+
+.building-img.five {
+    width: 45px;
+    height: auto;
+    transform: translateY(2px);
+}
+
+.building-img.six {
+    width: 45px;
+    height: auto;
+    transform: translateY(2px);
+}
+
+.building-img.seven {
+    width: 45px;
+    height: auto;
+    transform: translateY(2px);
+}
+
+.building-img.eight {
+    width: 45px;
+    height: auto;
+    transform: translateY(2px);
+}
+
+.building-img.nine {
+    width: 45px;
+    height: auto;
+    transform: translateY(2px);
+}
+
+/*Employee icon*/
+
+.year-icon{
+    display: block;
+    margin: 0 auto 10px; /* Center the image */
+}
+
+.year-icon.one{
+    width:35px;
+    height: 38px;
+    margin-bottom: 0px;
+}
+
+.year-icon.two{
+    width: 50px;
+    height: 40px;
+    margin-bottom:0px;
+}
+
+.year-icon.three{
+    width: 60px;
+    height: 39px;
+    margin-bottom: 0px;
+}
+
+.year-icon.four{
+    width: 75px;
+    height: 41px;
+    margin-bottom: 0px;
+}
+
+.year-icon.five{
+    width: 75px;
+    height: 40px;
+    margin-bottom: 0px;
+    
+}
+/*transition for the timeline contents*/
+.timeline-content {
+    position:relative;
+    overflow: visible;
+    height: 300px; /* Adjust as per your design */
+}
+
+.timeline-slide {
+    display: flex;
+    top:-30px;
+    align-items: flex-start; /* Align items at the top (start) */
+    gap: 20px; /* Space between the card and details */
+    position: absolute;
+    opacity: 0;
+    transform: translateY(-30%); /* Start above the container */
+    transition: transform 1.5s ease, opacity 0.3s ease; /* Unified transition */
+}
+
+ .timeline-details {
+    flex: 1; /* Allow both to take equal space if needed */
+     /* Remove extra margin */
+    padding: 10px; /* Ensure consistent padding */
+    position: static; /* Avoid absolute or relative unless required */
+}
+
+/* Active slide - visible and in the correct position */
+.timeline-slide.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+/* For screens smaller than 1024px */
+@media screen and (max-width: 1024px) {
+    .timeline-slider {
+        max-width: 80%;
+        padding: 40px; /* Reduce padding for smaller screens */
+        margin-right: 40px;
+    }
+    
+    .timeline-card {
+        width: 150px;
+        height: 130px;
+        margin-left: 200px; /* Adjust margin for alignment */
+    }
+    
+    .timeline-details {
+        margin-left: 10px; /* Reduce left margin */
+        margin-top: 0.1%;
+    }
+    
+    .timeline-years::after {
+        width: 830px; /* Shorten the line */
+    }
+
+    .arrow-left {
+        top: 185px;
+        left: -2%;
+         /* Adjust arrow position */
+    }
+    .arrow-right {
+        top: 185px;
+    }
+}
+
+/* For screens smaller than 768px */
+@media screen and (max-width: 768px) {
+    .timeline-slider {
+        width: 100%;
+        padding: 35px;
+    }
+    
+    .timeline-slide .timeline-card {
+        width: 140px;
+        height: 140px;
+        margin-left: 130px; /* Adjust margin */
+    }
+    
+
+    .timeline-slide .timeline-details {
+        margin-left:5px;
+        margin-right: 50px;
+    }
+    
+    .timeline-years::after {
+        width: 640px; /* Shorten the line further */
+    }
+    
+    .arrow-left, .arrow-right {
+        top: 185px; /* Adjust arrow position */
+    }
+
+    .building-img, .year-icon {
+        width: 30px; /* Reduce icon size */
+        height: auto;
+    }
+}
+
+/* For screens smaller than 480px */
+@media screen and (max-width: 480px) {
+    /* Timeline Slider */
+    .timeline-slider {
+        width: 50%; /* Full width for mobile */
+        padding: 40px; /* Adjust padding */
+        position: relative;
+        margin: 0; /* Avoid unnecessary shifts */
+    }
+
+    /* Timeline Slide */
+    .timeline-slide {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px; /* Adequate gap for readability */
+        opacity: 0;
+        transform: translateY(20%);
+        transition: transform 0.8s ease, opacity 0.3s ease;
+    }
+
+    /* Active Slide */
+    .timeline-slide.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .timeline-years::after,
+    .timeline-years::before {
+        display: none; /* Hides the horizontal lines */
+    }
+
+
+    /* Timeline Years Layout */
+    .timeline-years {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)); /* Flexible grid */
+        gap: 5px;
+        justify-items: center;
+        margin-bottom: 10px;
+    }
+
+    .timeline-years .year {
+        font-size: 12px; /* Adjusted for mobile readability */
+        padding: 8px;
+        text-align: center;
+        display: inline-block;
+    }
+
+    /* Timeline Card */
+    .timeline-slide .timeline-card {
+        width: 90%; /* Adjust card width for smaller screens */
+        margin: 0 auto;
+    }
+
+    /* Timeline Details */
+    .timeline-slide .timeline-details {
+        width: 100%;
+        margin-top: 10px;
+        margin-right: 5px;
+    }
+
+    /* Building and Year Icons */
+    .building-img, .year-icon {
+        width: 30px;
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 5px;
+    }
+
+    /* Employee Count */
+    .employee-count {
+        font-size: 14px;
+    }
+
+    /* Navigation Arrows */
+    .arrow-left,
+    .arrow-right {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+        top: 45%; /* Adjust position */
+    }
+
+    .arrow-left {
+        left: 0.5px;
+    }
+
+    .arrow-right {
+        right: 0.5px;
+    }
+}
