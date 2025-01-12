@@ -1,0 +1,733 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding:0;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Timeline Slider */
+.timeline-slider {
+    width: 100%;
+    max-width: 90%;
+    min-height: 100px;
+    text-align: center;
+    position: relative;
+    padding: 50px 20px;
+}
+
+/* Timeline Container */
+.timeline-years {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Align items to the horizontal line */
+    position: relative;
+    width: 100%;
+    padding: 0;
+    gap: 50px;
+    margin-top: 30px;
+    
+}
+
+.timeline-years::before {
+    content: '';
+    position: absolute;
+    top: 68%; /* Align with the center of the container */
+    left: 0;
+    right: 0;
+    height: 2px; /* Line thickness */
+    background-color: #ddd;
+    z-index: -1;
+}
+
+.timeline-years::after {
+    content: '';
+    position: absolute;
+    top: 68%; 
+    left: 0;
+    right: 0;
+    height: 2px; 
+    background-color: #ddd;
+    z-index: -1;
+}
+
+
+/* Text Styles */
+.branches {
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(95, 120, 171);
+    margin-bottom: auto;
+}
+
+.text {
+    font-size: 10px;
+    color: #555;
+}
+
+/* Year Container */
+.year-container1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position:relative;
+    margin-left: 50px;
+    transform: translateY(105px);
+}
+.year-container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position:relative;
+    margin-left: 50px;
+    transform: translateY(96px);
+}
+.year-container3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position:relative;
+    margin-left: 50px;
+    transform: translateY(88px);
+}
+.year-container4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position:relative;
+    margin-left: 50px;
+    transform: translateY(77px);
+}
+.year-container5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position:relative;
+    margin-left: 50px;
+    transform: translateY(36px);
+}
+.year-container6 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position:relative;
+    margin-left: 50px;
+    transform: translateY(29px);
+}
+.year-container7 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position:relative;
+    margin-left: 50px;
+    transform: translateY(12px);
+}
+.year-container8 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position:relative;
+    margin-left: 50px;
+    transform: translateY(4px);
+}
+.year-container9 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position:relative;
+    margin-left: 50px;
+    transform: translateY(-3.5px);
+}
+
+/* Employee Container */
+.employee-container {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.employee-count {
+    font-size: 20px;
+    font-weight: bold;
+    color:rgb(123, 198, 10);
+}
+
+.employee-text {
+    font-size: 9px;
+    color: #555;
+}
+
+/* Year Styles */
+.year {
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+    text-align: center;
+    transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 2px;
+}
+
+.year:hover {
+    color: white;
+    background-color: #ff7b39;
+    border-radius: 2px;
+}
+
+.year.active {
+    color: white;
+    background-color: #ff7b39;
+    border-radius: 2px;
+}
+
+
+  /* Card Styling */
+  .timeline-card {
+    position: relative;
+    width: 180px; /* Adjust size as needed */
+    height: 135px;
+    border-radius: 2px;
+    background-color: #f7f4f4;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 290px;
+  }
+  
+  /* Year Styling */
+  .timeline-card .years {
+    font-size: 20px;
+    color: black;
+    margin-bottom:5px;
+  }
+  
+  /* Counts Section */
+  .timeline-card .counts {
+    display: flex;
+    flex-direction: row;
+    gap: 35px;
+    margin-left: 10px;
+    margin-bottom: 8px;
+  }
+  
+  .timeline-card .counts .offices,
+  .timeline-card .counts .employees {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  
+  .timeline-card .counts .count {
+    font-size: 22px;
+    color: #007bff;
+    font-weight: bolder;
+    margin-bottom: 1%;
+ }
+  
+  .timeline-card .counts .count1 {
+    font-size: 22px;
+    color:rgb(123, 198, 10);
+    font-weight: bolder;
+  }
+
+  .timeline-card .counts .label {
+    
+    color: #555;
+    font-size: 9px;
+    
+  }
+
+  /* Images Section */
+  .timeline-card .icons {
+    display: flex;
+    gap: 40px;
+    margin-top: 0;
+  }
+  
+  .timeline-card .icons .icon {
+    width: 45px;
+    height: 45px;
+}
+
+  .timeline-card::after {
+    content: '';
+    position:absolute;
+    top: 23%;
+    left:99.9%; /* Adjusts the position to be outside the card */
+    width: 10px; /* Width of the orange line */
+    height: 55%; /* Matches the card's height */
+    background-color: #ff7b39; /* Color of the line */
+    border-radius: 0px;
+    
+}
+
+  
+ /* Right Section Details */
+ .timeline-details {
+    flex: 1;
+    margin-right: 10px;
+    margin-left: 1px;
+    position: relative; /* Use relative positioning to ensure layout stability */
+    text-align: left;
+    
+  }
+  
+  .timeline-details h4 {
+    font-size: 13px;
+    color: #333;
+    margin-bottom: 0;
+    text-align: left;
+  }
+  
+  /* Horizontal Line Under Headings */
+  .timeline-details hr {
+    border: none;
+    width: 65%;
+    border-top: 1px solid blue;
+    margin: 5px 0 15px;/*space between the keymilestones, awar and underline*/
+  }
+  
+  /* List Styling */
+  .timeline-details ul {
+    list-style: none;
+    text-align: left;
+    padding: 0;
+  }
+  
+  .key-milestones ul li {
+    font-size: 14px;
+    color: #555;
+    padding-left: 25px; 
+    position: relative;
+    margin-bottom: 8px; 
+  }
+  .key-milestones li {
+    font-size: 14px;
+    color: #555; /* Keep the styling similar to timeline details */
+    position: relative; /* Ensure relative positioning */
+}
+
+.highlight {
+    color: rgb(123, 198, 10); /* Replace 'orange' with your desired color */
+    font-weight: bold; /* Optional: Make it bold for emphasis */
+}
+
+/* Add tick icon only for Key Milestones section */
+.key-milestones li::before {
+    content: "🗹";
+    position: relative;
+    margin-right:10px ;
+    color: #007bff;
+    font-size: 16px;
+    
+  }
+  
+  /* Prevent overlap of the icon with text */
+  .key-milestones li {
+    position: relative;
+    padding-left: 8px;
+  }
+  
+  /* Ensure other sections (like Awards) have no icon */
+  .awards li::before {
+    content: none;
+  }
+  .awards {
+    list-style: none;
+    padding: 0;
+}
+
+.awards li {
+    margin: 5px 0;
+}
+
+.highlight-container {
+    display: grid;
+    grid-template-columns: 30px 1fr; /* Fixed width for highlights */
+    align-items: right; /* Align items vertically */
+}
+.highlight {
+    font-weight: bold;
+    color:  rgb(123, 198, 10); 
+    font-size: 14px;
+    text-align: right; /* Align numbers to the right for consistent spacing */
+}
+
+.award-description {
+    font-size: 14px;
+    color: #555;
+    padding-left: 8px; /* Optional: Add some spacing for readability */
+}
+
+/* Navigation Arrows */
+.arrow-left,
+.arrow-right {
+    position: absolute;
+    transform: translateY(50%);
+    font-size: 34px;
+    color: #ff7b39;
+    cursor: pointer;
+    background-color: #fff;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    top: 41%;
+}
+
+.arrow-left {
+    left: 0%;
+}
+
+.arrow-right {
+    margin-left: 96%;
+}
+
+.arrow-left:hover,
+.arrow-right:hover {
+    background-color: #ff7b39;
+    color: #fff;
+}
+
+/* Building Image Styles */
+.building-img {
+    display: block;
+    margin: 5px auto 10px; /* Center the image */
+}
+
+/* Building Image Styles */
+.building-img {
+    display: block;
+    margin: 0 auto; /* Center the image */
+    position: relative; /* Ensures positioning is within a container if needed */
+    transform: translateY(10px); /* Adjusts vertical position */
+}
+
+/* Sizes for the building images */
+.building-img.one {
+    width: 40px;
+    height: auto;
+    transform: translateY(0);
+}
+
+.building-img.two {
+    width: 40px;
+    height: auto;
+    transform: translateY(0);
+}
+
+.building-img.three {
+    width: 40px;
+    height: auto;
+    transform: translateY(0);
+}
+
+.building-img.four {
+    width: 40px;
+    height: auto;
+    transform: translateY(2px);
+}
+
+.building-img.five {
+    width: 40px;
+    height: auto;
+    transform: translateY(2px);
+}
+
+.building-img.six {
+    width: 40px;
+    height: auto;
+    transform: translateY(2px);
+}
+
+.building-img.seven {
+    width: 40px;
+    height: auto;
+    transform: translateY(2px);
+}
+
+.building-img.eight {
+    width: 40px;
+    height: auto;
+    transform: translateY(2px);
+}
+
+.building-img.nine {
+    width: 40px;
+    height: auto;
+    transform: translateY(2px);
+}
+
+/*Employee icon*/
+
+.year-icon{
+    display: block;
+    margin: 0 auto 10px; /* Center the image */
+}
+
+.year-icon.one{
+    width:30px;
+    height: 35px;
+    margin-bottom: 0px;
+}
+
+.year-icon.two{
+    width: 45px;
+    height: 40px;
+    margin-bottom:0px;
+}
+
+.year-icon.three{
+    width: 55px;
+    height: 39px;
+    margin-bottom: 0px;
+}
+
+.year-icon.four{
+    width: 75px;
+    height: 41px;
+    margin-bottom: 0px;
+}
+
+.year-icon.five{
+    width: 75px;
+    height: 40px;
+    margin-bottom: 0px;
+    
+}
+/*transition for the timeline contents*/
+.timeline-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.timeline-slide {
+    display: flex;
+    align-items: flex; /* Align items at the top (start) */
+    gap: 20px; /* Space between the card and details */
+    position: absolute;
+    opacity: 0;
+    transform: translateY(-30%); /* Start above the container */
+    transition: transform 1.5s ease, opacity 0.3s ease; 
+}
+.timeline-slide.active {
+    opacity: 1;
+    transform: translateY(0);
+    position: relative;
+}
+
+ .timeline-details {
+    flex: 1;
+    text-align: left;
+    margin: 0;
+    padding: 10px;
+    border-radius: 8px;
+    position: relative;
+    background-color: #fff;
+ }
+
+/* Media Query for screen size <= 1024px*/
+@media (max-width: 1024px) {
+    .timeline-slider {
+        padding: 30px 20px;
+        max-width: 95%;
+        top: 10px;
+    }
+    .year-container1{
+        margin-left: 35px;
+    }
+    .year-container2{
+        margin-left: 35px;
+    }
+    .year-container3{
+        margin-left: 35px;
+    }
+    .year-container4{
+        margin-left: 35px;
+    }
+    .year-container5{
+        margin-left: 35px;
+    }
+    .year-container6{
+        margin-left: 35px;
+    }
+    .year-container7{
+        margin-left: 35px;
+    }
+    .year-container8{
+        margin-left: 35px;
+    }
+    .year-container9{
+        margin-left: 35px;
+    }
+    .timeline-years {
+        justify-content: flex-start;
+        margin: 10px 0;
+    }
+    .timeline-card {
+        width: 180px;
+        margin-left: 200px;
+    }
+    .timeline-details {
+        font-size: 14px;
+        padding: 10px;
+    }
+    .arrow-left {
+        font-size: 32px;
+        width: 36px;
+        height: 36px;
+        top: 205px;
+    }
+    .arrow-right {
+        font-size: 32px;
+        width: 36px;
+        height: 36px;
+        top: 205px;
+    }
+}
+
+/* Media Query for screen size <= 768px */
+@media (max-width: 768px) {
+    .timeline-slider {
+        padding: 50px;
+        max-width: 80%;
+        margin-right: 45px;
+    }
+
+    .timeline-years {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .timeline-card {
+        width: 140px; 
+        margin-left:70px;
+    }
+
+    .timeline-details {
+        font-size: 12px; 
+        padding: 5px;
+        margin-left:10px;
+    }
+
+    .timeline-years::before {
+       width: 1%;
+    }
+
+    .timeline-details hr {
+        width: 95%;
+      }
+    
+    .timeline-years::after {
+       width: 106%;
+    }
+
+    .arrow-left {
+        top: 38%; 
+        font-size: 28px;
+        width: 30px;
+        height: 30px;
+    }
+    .arrow-right {
+        top: 38%;
+        font-size: 28px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .building-img {
+        width: 30px; 
+    }
+
+    .year-icon.one {
+        width: 25px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .arrow-left,
+    .arrow-right {
+        position: absolute;
+        top: 33%; 
+        transform: translateY(-50%);
+        z-index: 10;
+        font-size: 20px;
+        width: 25px;
+        height: 25px;
+        color: #333;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .arrow-left {
+        left:40px;
+    }
+
+    .arrow-right {
+        right: -10px;
+    }
+    
+    .timeline-card {
+        flex: 0 0 auto; 
+        width: 140px;
+        height: 150px; 
+        margin-left: 130px;
+
+    }
+
+    .timeline-slide.active {
+    opacity: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+}
+    .timeline-details {
+    font-size: 12px; 
+    padding: 2px;
+    flex-direction: column;
+    margin-bottom: 60px;
+    text-align: center;
+    margin-left: 50px;
+}
+    .year-icon.five {
+    width: 60px;
+    height: 30PX;
+}
+
+.year-icon.three {
+    width: 35px;
+    height: 30px;
+}
+.year-icon.four {
+    width: 45px;
+    height: 30px;
+}
+.year-icon.two {
+    width: 35px;
+    height: 32px;
+}
+
+}
+
